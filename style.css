@@ -1,7 +1,10 @@
   html{
-    font-size: 5px;
+    
     scroll-behavior: smooth ;
   }
+
+  /* Style for navigation menu */ 
+
   .topnav {
     background-color: rgb(242, 203, 119);
     display:flex; 
@@ -158,6 +161,8 @@
       }
     }
 
+    /* Style for top button */
+
   #topBtn {
    
     display: none;
@@ -178,6 +183,9 @@
   #topBtn:hover {
     background-color: #555;
   }
+
+  /* Style for home page */
+
 section{
   height: 100vh;
   width: 100%;
@@ -193,6 +201,8 @@ width: 100%;
 #news{
   background-color: rgb(139, 225, 225);
 }
+
+/* Style for respons page */
 
 input[type=text], select, textarea {
   width: 100%; 
