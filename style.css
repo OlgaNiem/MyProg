@@ -1,8 +1,12 @@
+* {
+  box-sizing: border-box;
+}
   html{
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     scroll-behavior: smooth ;
     background-color: #f0f2c0;
+  
   }
 
   /* Style for navigation menu */ 
@@ -39,9 +43,6 @@
       font-size: 15px;
       border: 1px; 
       border-radius: 4px;
-     
-     
-      
     }
   
     .active {
@@ -256,8 +257,10 @@ input[type=submit]:hover {
 
 .contact {
   border-radius: 5px;
-  background-color: #f4f3d2f1;
   padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+ 
 }
 
 /* Style for registrering page */
@@ -266,9 +269,7 @@ input[type=submit]:hover {
   --error-color: #ee1f09;
 }
 
-* {
-  box-sizing: border-box;
-}
+
 .registrering {
   background-color: #fff;
   border-radius: 5px;
@@ -332,9 +333,7 @@ h1 {
 }
 
 .form button {
-
-
-box-sizing: border-box;
+cursor: pointer;
 background-color: rgb(242, 203, 119);
 color: black;
 padding: 12px 20px;

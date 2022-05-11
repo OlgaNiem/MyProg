@@ -60,6 +60,12 @@ function myFunction() {
     }
 
     // Kontrollera obligatoriska fält
+      /**
+     *
+     * @param {HTMLElement[]} inputElements
+     * @returns {boolean}
+     */
+
     function checkRequired(inputElements) {
      let isRequired = false;
       inputElements.forEach(function (input) {
@@ -78,14 +84,10 @@ function myFunction() {
   function checkLength(input, min, max) {
     if (input.value.length < min) {
       showError(
-        input,
-        `Fältet ${getFieldName(input)} får inte vara mindre än ${min} tecken långt`
-      );
+        input, `Fältet ${getFieldName(input)} får inte vara mindre än ${min} tecken långt`);
     } else if (input.value.length > max) {
       showError(
-        input,
-        `Fältet ${getFieldName(input)} får inte vara länge än ${max} tecken`
-      );
+        input, `Fältet ${getFieldName(input)} får inte vara länge än ${max} tecken`);
     } else {
       showSuccess(input);
     }
