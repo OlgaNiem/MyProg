@@ -156,4 +156,3 @@ const suggestions = document.querySelector('.suggestions');
 
 tdInput.addEventListener('change', displayMatches);
 tdInput.addEventListener('keyup', displayMatches);
-
