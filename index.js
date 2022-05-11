@@ -119,3 +119,41 @@ function myFunction() {
 
 })();
 
+/* Script for sökning */
+
+const endpoint = 'https://raw.githubusercontent.com/OlgaNiem/MyProg/master/books.json';
+ 
+const books = [];
+ fetch(endpoint)
+ .then(blob => blob.json())
+ .then(data => books.push(...data));
+
+ function findMathches(wordToMatch, books) {
+   return books.filter(place => {
+     const regex = new RegExp(wordToMatch, 'gi');
+     return place.title.match(regex) || place.year.match(regex) || place.author.match(regex)
+   });
+ }
+
+ function displayMatches() {
+   const matchArray = findMathches(this.value, books);
+   const html = matchArray.map(place => {
+     const regex = new RegExp(this.value, 'gi');
+     const titleName = place.title.replace(regex, `<span class="hl">${this.value}</span>`); 
+     const authorName = place.author.replace(regex, `<span class="hl">${this.value}</span>`); 
+  return `
+  <li>
+  <span class="name">${titleName}, ${authorName}</span>
+  <span class="year">${place.year}</span>
+</li>
+  `;
+    }).join('');
+   suggestions.innerHTML = html;
+}
+
+const tdInput = document.querySelector('.td');
+const suggestions = document.querySelector('.suggestions');
+
+tdInput.addEventListener('change', displayMatches);
+tdInput.addEventListener('keyup', displayMatches);
+
