@@ -105,7 +105,7 @@ function myFunction() {
     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
   }
 
-  // Set up event listeners on the form
+  /* Set up event listeners on the form
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -121,13 +121,13 @@ function myFunction() {
 
 /* Script for sökning */
 
-const endpoint = 'https://raw.githubusercontent.com/OlgaNiem/MyProg/master/books.json';
+const endpoint = 'https://raw.githubusercontent.com/OlgaNiem/MyProg/master/.vscode/books.json';
  
 const books = [];
  fetch(endpoint)
  .then(blob => blob.json())
  .then(data => books.push(...data));
-
+console.log(books);
  function findMathches(wordToMatch, books) {
    return books.filter(place => {
      const regex = new RegExp(wordToMatch, 'gi');
@@ -151,8 +151,8 @@ const books = [];
    suggestions.innerHTML = html;
 }
 
+
+})
 const tdInput = document.querySelector('.td');
 const suggestions = document.querySelector('.suggestions');
-
-tdInput.addEventListener('change', displayMatches);
-tdInput.addEventListener('keyup', displayMatches);
+  

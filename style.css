@@ -415,3 +415,26 @@ span.population {
 .hl {
   background: #ffc600;
 }
+
+/* Style for footer */
+footer{
+  box-sizing: border-box;
+  background-color: rgb(216, 179, 97); 
+
+  border: 1px solid rgb(222, 171, 61); 
+  border-radius: 4px;
+}
+
+.footer-content p{
+  
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
