@@ -11,7 +11,7 @@
   <header>
     <div class="topnav" id="myTopnav">
       <a class="navbar-brand" href="index.html">
-        <img src="/photo/sol.png" alt="" class="navbar-logo"><b>Quentis</b></a>
+        <b>Quentis</b></a>
         <a href="index.html">Home</a>
         <a href="news.html">Nyheter</a></li>
         <a href="registrering.html">Registrering</a>
@@ -47,12 +47,24 @@
   </header>
   <button onclick="topFunction()" id="topBtn" title="Go to top">Upp</button>
 
-  <form class="searching-form">
-    <input type="text" class="searching" placeholder="Author or Title">
+  <div id="cover">
+  <form class="searching-form" method="get" action="">
+     
+    <input type="text" class="searching" placeholder="Författare eller titel">
     <ul class="suggestions">
-      <li>Type to search for a book</li>
+      <li>Skriv för att söka efter en bok</li>
     </ul>
+     <div class="tb">
+    <div class="td" id="s-cover"> 
+      <button class="submit" type="submit">
+        <div id="s-circle"></div>
+        <span></span>
+      </button>
+    </div>
+    </div>
+   
   </form>
+</div>
     <script src="sökning.js"></script>
 </body>
 </html>
