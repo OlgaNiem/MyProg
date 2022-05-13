@@ -93,7 +93,7 @@ function myFunction() {
     }
   }
 
-  // Password Compliance Check
+  /* Password Compliance Check
   function checkPasswordsMatch(input1, input2) {
     if (input1.value !== input2.value) {
       showError(input2, "Lösenorden matchar inte");
@@ -120,39 +120,51 @@ function myFunction() {
 })();
 
 /* Script for sökning */
+const endpoint = 'https://gist.githubusercontent.com/zer0cheros/144c99f743a1d83699bc7571242f14bf/raw/76e3d45cf90058b36823d17cc95cd4d5a37fbcf6/gistfile1.txt';
 
-const endpoint = 'https://raw.githubusercontent.com/OlgaNiem/MyProg/master/.vscode/books.json';
- 
-const books = [];
- fetch(endpoint)
- .then(blob => blob.json())
- .then(data => books.push(...data));
-console.log(books);
- function findMathches(wordToMatch, books) {
-   return books.filter(place => {
-     const regex = new RegExp(wordToMatch, 'gi');
-     return place.title.match(regex) || place.year.match(regex) || place.author.match(regex)
-   });
- }
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
 
- function displayMatches() {
-   const matchArray = findMathches(this.value, books);
-   const html = matchArray.map(place => {
-     const regex = new RegExp(this.value, 'gi');
-     const titleName = place.title.replace(regex, `<span class="hl">${this.value}</span>`); 
-     const authorName = place.author.replace(regex, `<span class="hl">${this.value}</span>`); 
-  return `
-  <li>
-  <span class="name">${titleName}, ${authorName}</span>
-  <span class="year">${place.year}</span>
-</li>
-  `;
-    }).join('');
-   suggestions.innerHTML = html;
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
+
+
+const cities = [];
+fetch(endpoint)
+  .then(res => res.json())
+  .then(data => cities.push(...data));
+function findMatches(wordToMatch, cities) {
+  return cities.filter(place => {
+    // here we need to figure out if the city or state matches what was searched
+    const regex = new RegExp(wordToMatch, 'gi');
+    return place.author.match(regex) || place.title.match(regex)
+  });
 }
 
+function numberWithCommas(x) {
+  if(x.toString() == 'undefiend'){
+    return
+  }else{  
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+}
+  
 
-})
-const tdInput = document.querySelector('.td');
-const suggestions = document.querySelector('.suggestions');
+function displayMatches() {
+  const matchArray = findMatches(this.value, cities);
+  const html = matchArray.map(place => {
+    const regex = new RegExp(this.value, 'gi');
+    const cityName = place.author.replace(regex, `<span class="hl">${this.value}</span>`);
+    const stateName = place.title.replace(regex, `<span class="hl">${this.value}</span>`);
+    return `
+      <li>
+        <span class="name">${cityName}, ${stateName}</span>
+        <span class="population">${numberWithCommas(place.pages)}</span>
+      </li>
+    `;
+  }).join('');
+  suggestions.innerHTML = html;
+}
+
+  })
   
