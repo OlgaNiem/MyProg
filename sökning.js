@@ -1,10 +1,10 @@
 const endpoint = 'https://gist.githubusercontent.com/zer0cheros/144c99f743a1d83699bc7571242f14bf/raw/76e3d45cf90058b36823d17cc95cd4d5a37fbcf6/gistfile1.txt';
 
-const searchInput = document.querySelector('.search');
+const searchingInput = document.querySelector('.searching');
 const suggestions = document.querySelector('.suggestions');
 
-searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);
+searchingInput.addEventListener('change', displayMatches);
+searchingInput.addEventListener('keyup', displayMatches);
 
 
 const cities = [];
@@ -46,3 +46,29 @@ function displayMatches() {
 
 
 
+/* Script for navigation menu */
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+/* Script for top button page */
+
+var topbutton = document.getElementById("topBtn");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topbutton.style.display = "block";
+   } else{
+     topbutton.style.display = "none";
+   }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
