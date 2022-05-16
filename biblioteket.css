@@ -181,7 +181,7 @@
         }
       }
   
-      /* Style for top button */
+     /* Style for top button */
   
     #topBtn {
       box-sizing: border-box;
@@ -203,10 +203,78 @@
     #topBtn:hover {
       background-color: #555;
     }
+
+    /* Style for biblioteket */
   
+    .sidebar {
+        box-sizing: border-box;
+        height: 90%;
+        width: 0;
+        position: fixed;
+        margin-top: 72px;
+        margin-bottom: 80px;
+        top: 0;
+        left: 0;
+        background-color: #f0f2c0;;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 50px;
+        border: 1px solid rgb(222, 171, 61); 
+      border-radius: 4px;
+      }
+      
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 22px;
+        color: #000000;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidebar a:hover {
+        color: #9e6214;
+      }
+      
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        padding-top: 10px;
+      }
+      
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: rgb(238, 185, 40);
+        color: rgb(7, 7, 7);
+        padding: 10px 15px;
+        border: none;
+      }
+      
+      .openbtn:hover {
+        background-color: rgb(251, 244, 165);
+      }
+      
+      #main {
+        transition: margin-left .5s;
+        padding: 16px;
+      }
+      
 
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
 
-
+.content-section{
+    padding-left:  15px;
+    padding-right: 85px;
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 /* Style for footer */
 footer{
