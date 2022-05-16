@@ -286,6 +286,7 @@
   }
   
   .td {
+    width: 100%;
     display: table-cell;
     vertical-align: left;
   
@@ -296,14 +297,12 @@
   }
   
   .submit {
-    position:absolute; 
-    left: 71.5%;
-    top: 46%;
+    position: relative;
+    top: 28px; left: 650px;
     border: 10px solid #f3baba;
     border-radius: 5px;
     font-size: 40px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
-    max-width: 840px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
    
@@ -316,6 +315,8 @@
   @media only screen and (max-width: 1000px) {
     .submit {
         display: none;
+        position:absolute; 
+       
     }
 }
   #s-circle {
@@ -385,12 +386,7 @@
     bottom: -11px;
     transform: rotateZ(-52deg);
   }
-  #s-cover:hover .submit span:before,
-  #s-cover:hover .submit span:after {
-    right: -6px;
-    width: 40px;
-    background-color: rgb(255, 255, 255);
-  }
+
   
   /* Style for footer */
 footer{
