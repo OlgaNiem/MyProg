@@ -3,7 +3,7 @@
 }
   html{
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
+   
     scroll-behavior: smooth ;
     background-color: #f0f2c0;
   
@@ -208,15 +208,13 @@
 
 section{
   height: 100vh;
-  width: auto;
-  background-color: #555;
 }
 #home{
   background-color: wheat;
   background-image: url(photo/quentis3.png);
   background-repeat: no-repeat;
   background-size: cover;
-width: auto;
+
 }
 #news{
   background-color: rgb(139, 225, 225);
