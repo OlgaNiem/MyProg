@@ -56,7 +56,7 @@ function myFunction() {
     x.className = "topnav";
   }
 }
-/* Script for top button page */
+/* Script for top button */
 
 var topbutton = document.getElementById("topBtn");
 window.onscroll = function() {scrollFunction()};
@@ -73,4 +73,8 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-/* Script for top searh button */
+/* Script for searh button */
+function mySubmit () {
+  document.getElementById("submit").submit();
+ }
+
