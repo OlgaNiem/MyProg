@@ -1,4 +1,28 @@
-/* Script for registrering page */
+
+function validateform() {
+  const username = document.getElementById("username");
+    const usersurname = document.getElementById("usersurname");
+    const password = document.getElementById("password");
+    
+  if (username==null || username=="") {
+    alert("Namnet kan inte vara tomt");
+    return false;
+  } else if (usersurname==null || usersurname==""){
+    alert("Efternamnet kan inte vara tomt");
+  } else if (password.length < 6){
+    alert("Lösenordet måste vara minst 6 tecken långt.");
+    return false;
+  }
+}
+
+
+
+
+
+
+
+
+/* Script for registrering page 
 
 !(function () {
     const form = document.getElementById("form");
@@ -38,7 +62,7 @@
      *
      * @param {HTMLElement[]} inputElements
      * @returns {boolean}
-     */
+     
 
     function checkRequired(inputElements) {
      let isRequired = false;
@@ -91,4 +115,4 @@
     }
   });
 })();
-
+*/

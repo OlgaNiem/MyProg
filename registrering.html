@@ -48,29 +48,36 @@
   <button onclick="topFunction()" id="topBtn" title="Go to top">Upp</button>
 
   <div class="registrering">
-      <form id="form" class="form">
+
+      <form id="form" class="form" name="myform" method="post" onsubmit="return validateform()" >
           <h1>Registrering</h1>
         <div class="form-control">
-            <label for="username">Namn och Efternamn</label>
-            <input type="text" id="username" placeholder="Skriv ditt namn här"/>
+            <label for="username">Namn</label>
+            <input type="text" name="username" id="username" placeholder="Skriv ditt namn här"/>
             <small>Felmeddelande</small>
         </div>
         <div class="form-control">
+          <label for="usersurname">Efternamn</label>
+          <input type="text" name="usersurname" id="usersurname" placeholder="Skriv ditt efternamn här"/>
+          <small>Felmeddelande</small>
+      </div>
+        <div class="form-control">
             <label for="epost">E-post</label>
-            <input type="text" id="epost" placeholder="Skriv in din e-postadress"/>
+            <input type="text" name="epost" id="epost" placeholder="Skriv in din e-postadress"/>
             <small>Felmeddelande</small>
         </div>
         <div class="form-control">
             <label for="password">Lösenord</label>
-            <input type="password" id="password" placeholder="Ange ditt lösenord"/>
+            <input type="password" name="password" id="password" placeholder="Ange ditt lösenord"/>
             <small>Felmeddelande</small>
         </div>
         <div class="form-control">
             <label for="password2">Lösenordsbekräftelse</label>
-            <input type="password" id="password2" placeholder="Ange ditt lösenord igen"/>
+            <input type="password" name="password2" id="password2" placeholder="Ange ditt lösenord igen"/>
             <small>Felmeddelande</small>
         </div>
        <button type="submit" id="submit">Registrera</button>
+       <input type="submit">
   </form>
 </div>
 
