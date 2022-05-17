@@ -260,6 +260,11 @@ footer{
 font: 500 1rem Arial, Helvetica, sans-serif;
  }
 
+ .form--hidden {
+     display: none;
+ }
+
+
  .form > *:first-child {
      margin-top: 0;
  }
@@ -325,4 +330,20 @@ background: #fff;
   
   .form__button:hover {
   background-color: #f0f2c0;
+  }
+  .form__button:active{
+      transform:scale(0.98);
+  }
+
+  .form__text {
+      text-align: center;
+  }
+
+  .form__link {
+      color: var(--color-secondary);
+      text-decoration: none;
+      cursor: pointer;
+  }
+  .form__link:hover {
+      text-decoration: underline;
   }

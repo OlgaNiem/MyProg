@@ -48,25 +48,52 @@
   <button onclick="topFunction()" id="topBtn" title="Go to top">Upp</button>
 
 <div class="container">
-  <form class="form" id="login">
+  <form class="form form--hidden" id="login">
     <h1 class="form__title">Logga in</h1>
     <div class="form__message form__message--error"></div>
 <div class="form__input-group">
-  <input type="text" class="form__input" autofocus placeholder="Username or email">
+  <input type="text" class="form__input" autofocus placeholder="Användarnamn eller e-post">
   <div class="form__input-error-message"></div>
 </div>
 <div class="form__input-group">
-  <input type="password" class="form__input" autofocus placeholder="Password">
+  <input type="password" class="form__input" autofocus placeholder="Lösenord">
   <div class="form__input-error-message"></div>
 </div>
-<button class="form__button" type="submit">Continue</button>
+<button class="form__button" type="submit">Fortsätt</button>
 <p class="form__text">
-  <a href="#" class="form__link">Forgot your password?</a>
+  <a href="#" class="form__link">Har du glömt ditt lösenord?</a>
 </p>
 <p class="form__text">
-  <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+  <a class="form__link" href="./" id="linkCreateAccount">Har du inget konto? Skapa ett konto</a>
 </p>
   </form>
+
+  <form class="form" id="createAccount">
+    <h1 class="form__title">Skapa ett konto</h1>
+    <div class="form__message form__message--error"></div>
+<div class="form__input-group">
+  <input type="text" class="form__input" autofocus placeholder="Användarnamn">
+  <div class="form__input-error-message"></div>
+</div>
+<div class="form__input-group">
+  <input type="text" class="form__input" autofocus placeholder="E-post">
+  <div class="form__input-error-message"></div>
+</div>
+<div class="form__input-group">
+  <input type="password" class="form__input" autofocus placeholder="Lösenord">
+  <div class="form__input-error-message"></div>
+</div>
+<div class="form__input-group">
+  <input type="password" class="form__input" autofocus placeholder="Bekräfta lösenord">
+  <div class="form__input-error-message"></div>
+</div>
+<button class="form__button" type="submit">Fortsätt</button>
+
+<p class="form__text">
+  <a class="form__link" href="./" id="linkLogin">Har du redan ett konto? Logga in</a>
+</p>
+  </form>
+
 </div>
 
 
