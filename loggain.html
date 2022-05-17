@@ -48,7 +48,7 @@
   <button onclick="topFunction()" id="topBtn" title="Go to top">Upp</button>
 
 <div class="container">
-  <form class="form form--hidden" id="login">
+  <form class="form" id="login">
     <h1 class="form__title">Logga in</h1>
     <div class="form__message form__message--error"></div>
 <div class="form__input-group">
@@ -68,11 +68,11 @@
 </p>
   </form>
 
-  <form class="form" id="createAccount">
+  <form class="form form--hidden" id="createAccount">
     <h1 class="form__title">Skapa ett konto</h1>
     <div class="form__message form__message--error"></div>
 <div class="form__input-group">
-  <input type="text" class="form__input" autofocus placeholder="Användarnamn">
+  <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Användarnamn">
   <div class="form__input-error-message"></div>
 </div>
 <div class="form__input-group">
@@ -87,11 +87,11 @@
   <input type="password" class="form__input" autofocus placeholder="Bekräfta lösenord">
   <div class="form__input-error-message"></div>
 </div>
-<button class="form__button" type="submit">Fortsätt</button>
-
 <p class="form__text">
   <a class="form__link" href="./" id="linkLogin">Har du redan ett konto? Logga in</a>
 </p>
+<button class="form__button" type="submit">Fortsätt</button>
+
   </form>
 
 </div>
