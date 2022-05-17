@@ -313,14 +313,16 @@ background: #fff;
     color: var(--color-error);
 }
 .form__button{
-    width: 100%;
-    padding: 1rem 2rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #fff;
-    border: none;
-    border-radius: var(--border-radius);
-    outline: none;
     cursor: pointer;
-    background: var(--color-primary);
-}
+  background-color: rgb(242, 203, 119);
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  }
+  
+  .form__button:hover {
+  background-color: #f0f2c0;
+  }
