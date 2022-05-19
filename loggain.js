@@ -8,7 +8,7 @@ function myFunction() {
       x.className = "topnav";
     }
   }
-  v
+  
   
   var topbutton = document.getElementById("topBtn");
   window.onscroll = function() {scrollFunction()};
