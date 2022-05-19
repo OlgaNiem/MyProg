@@ -213,27 +213,18 @@ body {
   --color-error: #cc3333;
   --color-success: #4bb544;
   --border-radius: 4px;
-
- 
   
-  
-
-
- 
   font-size: 16px;
-    justify-content: center;
-    flex-direction: column;
+  
 }
 
 .container {
-
-text-align: center;
-
-  width: 400px;
-  max-width: 400px;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
   display: block;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
