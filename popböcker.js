@@ -27,9 +27,9 @@ function myFunction() {
 
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+
   /* Script for top button */
-  
-  var topbutton = document.getElementById("topBtn");
+    var topbutton = document.getElementById("topBtn");
   window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {

@@ -8,8 +8,8 @@ function myFunction() {
       x.className = "topnav";
     }
   }
- /* Script for top button */
-
+  
+  
   var topbutton = document.getElementById("topBtn");
   window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
@@ -19,11 +19,8 @@ function myFunction() {
        topbutton.style.display = "none";
      }
   }
-
+  
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-
-
-
