@@ -8,7 +8,7 @@ function myFunction() {
       x.className = "topnav";
     }
   }
- /* Script for top button page */
+ /* Script for top button */
 
   var topbutton = document.getElementById("topBtn");
   window.onscroll = function() {scrollFunction()};
@@ -25,7 +25,14 @@ function myFunction() {
     document.documentElement.scrollTop = 0;
   }
 
-  /* Script for registrering page */
+
+
+
+
+
+
+
+  /* Script for registrering page 
 
   !(function () {
     const form = document.getElementById("form");
@@ -67,7 +74,7 @@ function myFunction() {
      * @returns {boolean}
      */
 
-    function checkRequired(inputElements) {
+    /*function checkRequired(inputElements) {
      let isRequired = false;
       inputElements.forEach(function (input) {
        if (input.value.trim() === "") {
@@ -118,4 +125,5 @@ function myFunction() {
     }
   });
 })();
+*/
 
